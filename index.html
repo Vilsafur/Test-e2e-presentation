@@ -23,6 +23,9 @@
     <meta name="description" content="Test e2e's presentation" />
     <meta name="author" content="Cyril Poidevin" />
     <link href="css/3D-rotations.css" rel="stylesheet" />
+    <link href="styles/vs2015.css" rel="stylesheet" />
+    <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body class="impress-not-supported">
@@ -142,11 +145,37 @@
     </div>
 
     <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
-        <p>Slide seven</p>
+        <h5>Exemple avec Cypress</h5>
+        <pre><code class="javascript">
+describe('My First Test', function() {
+    it('clicking "type" navigates to a new url', function() {
+        cy.visit('https://example.cypress.io')
+    
+        cy.contains('type').click()
+    
+        cy.url().should('include', '/commands/actions')
+    })
+})
+        </code></pre>
     </div>
 
     <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx">
-        <p>Slide eight</p>
+            <h5>Exemple avec NightwatchJS</h5>
+            <pre><code class="javascript">
+module.exports = {
+    'Demo test Google' : function (browser) {
+        browser
+        .url('http://www.google.com')
+        .waitForElementVisible('body')
+        .setValue('input[type=text]', 'nightwatch')
+        .waitForElementVisible('input[name=btnK]')
+        .click('input[name=btnK]')
+        .pause(1000)
+        .assert.containsText('#main', 'Night Watch')
+        .end();
+    }
+};
+            </code></pre>
     </div>
 <!-- data-goto-next="step-1"-->
 <!-- data-goto-prev="step-8"-->
