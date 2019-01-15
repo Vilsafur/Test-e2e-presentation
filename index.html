@@ -1,0 +1,167 @@
+<!doctype html>
+
+<!--
+  This is a simple example / template impress.js slide show. The goal is to be
+  easier to read for a first timer than the official and very feature rich
+  demo by bartaz (http://bartaz.github.io/impress.js/). It's also a very
+  traditional presentation that looks like slides (square screens with bullet
+  points...), again to make a first timer feel more at home. From this simple
+  presentation you can then go on to more powerful impress.js presentations!
+  
+  This example is hopefully helpful for people that want to create both
+  simple and (eventually) awesome presentations in impress.js and comfortable
+  doing that directly in HTML.
+  
+  By: @vilsafur (Still based on the HTML from bartaz' demo.)  
+    
+-->
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Tests e2e : garantir la non régression de vos applications| by Cyril POIDEVIN @vilsafur</title>
+    <meta name="description" content="Test e2e's presentation" />
+    <meta name="author" content="Cyril Poidevin" />
+    <link href="css/3D-rotations.css" rel="stylesheet" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-autoplay="0">
+
+
+    <div id="overview" class="step overview title" data-x="1350" data-y="100" data-z="100" data-scale="3" data-rotate-y="90">
+         <h1>Tests e2e : <br />garantir&nbsp;la non&nbsp;régression de vos applications</h1>
+    </div>
+
+    <div id="step-1" class="step" data-x="0" data-y="0" data-z="0">
+        <p>Quand les tests unitaires sont bons mais pas les tests d’intégration</p>
+        <video width="100%" autoplay="" loop="" muted="" playsinline=""><source src="https://ljdchost.com/015/fc03ec72cc.webm" type="video/webm"><source src="https://ljdchost.com/015/fc03ec72cc.mp4" type="video/mp4"><object data="https://ljdchost.com/015/fc03ec72cc.gif" type="image/gif"></object></video>
+    </div>
+
+    <div id="step-2" class="step" data-x="420" data-y="-70" data-z="-250" data-rotate-z="45" data-rotate-y="-45" data-rotate-order="zyx">
+        <p>Quand on me demande si j’ai testé la compatibilité du site sous plusieurs navigateurs</p>
+        <video width="100%" autoplay="" loop="" muted="" playsinline=""><source src="https://ljdchost.com/018/ImaouOP.webm" type="video/webm"><source src="https://ljdchost.com/018/ImaouOP.mp4" type="video/mp4"><object data="https://ljdchost.com/018/ImaouOP.gif" type="image/gif"></object></video>
+    </div>
+
+    <div id="step-3" class="step" data-x="700" data-y="350" data-z="-350" data-rotate-z="90" data-rotate-y="-90" data-rotate-order="zyx">
+        <p>Quand je passe une fonctionnalité en prod sans avoir testé correctement son intégration</p>
+        <video width="100%" autoplay="" loop="" muted="" playsinline=""><source src="https://ljdchost.com/035/ZPru5MT.webm" type="video/webm"><source src="https://ljdchost.com/035/ZPru5MT.mp4" type="video/mp4"><object data="https://ljdchost.com/035/ZPru5MT.gif" type="image/gif"></object></video>
+    </div>
+
+    <div id="step-4" class="step" data-x="422" data-y="780" data-z="-250" data-rotate-z="135" data-rotate-y="-135" data-rotate-order="zyx">
+        <img width="100%" src="img/27.jpg" alt="Nightwatch.js">
+        <br /><br /><br />
+        <img width="100%" src="img/Cypressio-web-new.jpg" alt="Cypress.io">
+    </div>
+
+    <div id="step-5" class="step" data-x="0" data-y="702" data-z="0" data-rotate-z="180" data-rotate-y="-180" data-rotate-order="zyx">
+        <h1 class="title">Cypress.io</h1>
+        <table class="prosConst">
+            <thead>
+                <tr>
+                    <th>Pour</th>
+                    <th>Contre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Capture d'écran pour chaque étape du script</td>
+                    <td>Pas de support multi-navigateur</td>
+                </tr>
+                <tr>
+                    <td>Utilisation de Mocha comme fournisseur de structure</td>
+                    <td>Les tests en parallèle manquent encore</td>
+                </tr>
+                <tr>
+                    <td>Pas d'utilisation de Selenium</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="notes">
+            <ul>
+                <li>Cypress n’utilise pas de sélénium: la plupart des outils de bout en bout que nous avons expérimentés utilisent du sélénium, c’est pourquoi ils ont presque les mêmes problèmes.</li>
+                <li>Cypress supporte très bien n'importe quel framework ou site web: Il existe des centaines de projets utilisant les derniers frameworks React, Angular, Vue, Elm, etc. Cypress fonctionne également aussi bien sur les anciennes pages de rendu de serveur ou les applications.</li>
+                <li>Les tests Cypress sont uniquement écrits en JavaScript: Bien que vous puissiez compiler en JavaScript depuis n’importe quel autre langage, le code de test est finalement exécuté dans le navigateur lui-même. Il n'y a pas de langues ou de liaisons de pilotes - il y a et il n'y aura que JavaScript.</li>
+                <li>Il n’ya pas de dépendances, vous mettez votre test dans package.json et c’est tout.</li>
+                <li>Cypress est beaucoup plus rapide en comparaison avec les outils de bout en bout de Selenium que nous avons expérimentés.</li>
+                <li>Il y a une capture d'écran pour chaque étape de votre script, ce qui peut être très utile en cas de test de réussite ou d'échec, c'est bon pour le débogage !!</li>
+                <li>Cypress a une cyntaxe claire, il est facile à lire, vous l’aimerez!</li>
+            </ul>
+            <ul>
+                <li>La structure étant différente des autres outils de bout en bout de Selenium, vous devrez peut-être tout d'abord passer plus de temps à comprendre la structure et à trouver le meilleur moyen de créer vos scripts.</li>
+                <li>Caractéristiques. Aucun support de téléchargement de fichier. Pas de tests de navigateurs croisés. Qui sait quand ces problèmes seront traités? Pour les grands projets, ces fonctionnalités sont essentielles.</li>
+                <li>Modèle d'objet de page. C'est quelque chose qui a déjà été prouvé par le temps. Cypress soutient une approche différente qui pourrait être controversée. Plus de détails à ce sujet sont ici: Cypress POM</li>
+                <li>Il est uniquement disponible pour un seul client (langue), c'est-à-dire pour JavaScript uniquement. Donc, pour travailler avec cela, vous devez connaître JavaScript. Cependant, cela pourrait être un avantage pour l’application JavaScript, mais j’aimerais le mettre comme un inconvénient pour ceux qui ont des difficultés avec javascript.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="step-6" class="step" data-x="379" data-y="780" data-z="270" data-rotate-z="135" data-rotate-y="-225" data-rotate-order="zyx">
+        <h1 class="title">NightwatchJS</h1>
+        <table class="prosConst">
+            <thead>
+                <tr>
+                    <th>Pour</th>
+                    <th>Contre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Syntaxe propre</td>
+                    <td>Support de Mocha uniquement</td>
+                </tr>
+                <tr>
+                    <td>Intégration continue</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Prise en charge de CSS et Xpath</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="notes">
+                <ul>
+                    <li>Syntaxe propre: une syntaxe simple mais puissante vous permet d'écrire des tests très rapidement.</li>
+                    <li>Programme d'exécution de test intégré: le programme d'exécution de test de ligne de commande intégré peut exécuter les tests de manière séquentielle ou parallèle, ensemble, par groupe, balises ou une seule fois.</li>
+                    <li>Prise en charge des services cloud: fonctionne avec des fournisseurs de tests cloud, tels que SauceLabs et BrowserStack.</li>
+                    <li>Prise en charge de CSS et Xpath: Des sélecteurs CSS ou Xpath peuvent être utilisés pour localiser et vérifier des éléments sur la page ou pour exécuter des commandes.</li>
+                    <li>Prise en charge de l'intégration continue: les rapports XML JUnit sont intégrés pour vous permettre d'intégrer vos tests dans votre processus de construction à des systèmes tels que Teamcity, Jenkins, Hudson, etc.</li>
+                </ul>
+                <ul>
+                    <li>Il n’a pas beaucoup de choix pour les frameworks de tests unitaires car il dispose de son propre framework de tests et supporte également Mocha.</li>
+                    <li>Un support légèrement inférieur à WebDriverIO et à Protractor.</li>
+                </ul>
+        </div>
+    </div>
+
+    <div id="step-7" class="step" data-x="700" data-y="350" data-z="350" data-rotate-z="90" data-rotate-y="-270" data-rotate-order="zyx">
+        <p>Slide seven</p>
+    </div>
+
+    <div id="step-8" class="step" data-x="379" data-y="-70" data-z="270" data-rotate-z="45" data-rotate-y="-315" data-rotate-order="zyx">
+        <p>Slide eight</p>
+    </div>
+<!-- data-goto-next="step-1"-->
+<!-- data-goto-prev="step-8"-->
+    <div id="overview2" class="step overview" data-x="2018" data-y="106" data-z="3018" data-scale="2">
+         <p>
+             Les 
+         </p>
+    </div>
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
