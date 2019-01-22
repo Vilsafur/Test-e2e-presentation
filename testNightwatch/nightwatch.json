@@ -1,28 +1,60 @@
 {
   "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "",
+  "custom_assertions_path" : "",
   "page_objects_path" : "./pages",
-  "webdriver": {
-    "server_path": "node_modules/.bin/chromedriver",
-    "cli_args": [
-      "--verbose"
-    ],
-    "port": 9515
-  },
+  "globals_path" : "",
 
-  "test_settings" : {
-    "default" : {
-      "desiredCapabilities" : {
-        "browserName" : "chrome"
-      }
-    }
-  },
   "selenium" : {
     "start_process" : true,
     "server_path" : "./bin/selenium-server-standalone-3.14.0.jar",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.gecko.driver" : "./bin/geckodriver"
+      "webdriver.chrome.driver" : "bin/chromedriver.exe",
+      "webdriver.gecko.driver" : "bin/geckodriver.exe",
+      "webdriver.edge.driver" : "bin/MicrosoftWebDriver.exe"
+    }
+  },
+  "test_settings" : {
+      "default" : {
+        "launch_url" : "http://10.51.111.134/4DCGI",
+        "globals" : {
+          "vtIdentifiantURL" : "ExadeDistribution_devCyril"
+        },
+        "selenium_port"  : 4444,
+        "selenium_host"  : "127.0.0.1",
+        "silent": true,
+        "screenshots" : {
+          "enabled" : true,
+          "on_failure" : true,
+          "on_error" : false,
+          "path" : "screens"
+        },
+        "desiredCapabilities": {
+            "browserName": "firefox",
+            "marionette": true
+        }
+    },
+
+    "preprod": {
+        "launch_url" : "http://10.151.211.15/4DCGI",
+        "globals" : {
+          "vtIdentifiantURL" : "ExadeDistribution_Preprod"
+        }
+    },
+
+    "chrome" : {
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      }
+    },
+
+    "edge" : {
+      "desiredCapabilities": {
+        "browserName": "MicrosoftEdge"
+      }
     }
   }
 }
