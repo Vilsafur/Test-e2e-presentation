@@ -19,10 +19,7 @@
   },
   "test_settings" : {
       "default" : {
-        "launch_url" : "http://10.51.111.134/4DCGI",
-        "globals" : {
-          "vtIdentifiantURL" : "ExadeDistribution_devCyril"
-        },
+        "launch_url" : "http://www.google.fr",
         "selenium_port"  : 4444,
         "selenium_host"  : "127.0.0.1",
         "silent": true,
@@ -38,16 +35,10 @@
         }
     },
 
-    "preprod": {
-        "launch_url" : "http://10.151.211.15/4DCGI",
-        "globals" : {
-          "vtIdentifiantURL" : "ExadeDistribution_Preprod"
-        }
-    },
-
     "chrome" : {
       "desiredCapabilities": {
-        "browserName": "chrome"
+        "browserName": "chrome",
+        "resolution": "800x600"
       }
     },
 

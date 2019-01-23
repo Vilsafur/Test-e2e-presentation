@@ -1,13 +1,25 @@
 module.exports = {
-    'Demo test Google' : function (browser) {
-      browser
-        .url('http://www.google.com')
-        .waitForElementVisible('body', 1000)
-        .setValue('input[type=text]', 'nightwatch')
-        .waitForElementVisible('input[name=btnK]', 1000)
-        .click('input[name=btnK]')
-        .pause(1000)
-        .assert.containsText('#main', 'Night Watch')
-        .end();
+    'Demo test' : function (browser) {
+      var firstPage = browser.page.firstPage()
+
+      firstPage.navigate()
+        .assert.visible('@button')
+        .assert.hidden('@progress')
+        .assert.hidden('@answer')
+        
+        browser.screenshot()
+        
+      firstPage.click('@button')
+
+      browser.pause(1000)
+      firstPage.assert.visible('@button')
+        .assert.visible('@progress')
+        .assert.hidden('@answer')
+
+      browser.pause(10000)
+
+      firstPage.assert.visible('@button')
+        .assert.hidden('@progress')
+        .assert.visible('@answer')
     }
-  };
+  }
